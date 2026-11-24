@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .login {
+            background-color: white;
+            width: 300px;
+            margin: 100px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 85%;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login" id="loginBox">
+
+        <h2>Login Page</h2>
+
+        <input type="email" id="email"
+        placeholder="Enter Email">
+
+        <input type="password" id="password"
+        placeholder="Enter Password">
+
+        <br><br>
+
+        <button onclick="login()">Login</button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+
+        function login() {
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (email == "admin@gmail.com" && password == "12345") {
+
+                document.getElementById("loginBox").innerHTML =
+                "<h2>Login Successful!</h2>" +
+                "<p>Welcome to the Home Page</p>";
+
+            }
+            else {
+
+                document.getElementById("message").innerHTML =
+                "Invalid Email or Password";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
